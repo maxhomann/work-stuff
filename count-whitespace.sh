@@ -18,4 +18,4 @@ done
 _total=$(expr $_allSpaces + $_allTabs)
 _ratioSpaces=$(awk -v var1=$_allSpaces -v var2=$_total 'BEGIN { print  ( var1 / var2 ) }')
 _ratioTabs=$(awk -v var1=$_allTabs -v var2=$_total 'BEGIN { print  ( var1 / var2 ) }')
-echo "Total: $_total, Tabs: $_allTabs r: $_ratioTabs, Spaces: $_allSpaces, r: $_ratioSpaces"
+echo "Total: $_total, Tabs: $_allTabs r: $_ratioTabs, Spaces: $_allSpaces r: $_ratioSpaces"

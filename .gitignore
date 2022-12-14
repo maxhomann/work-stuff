@@ -1,0 +1,7 @@
+### IntelliJ
+*.iml
+.idea/
+
+### Runtime data
+
+/gource-git-logs/
