@@ -103,19 +103,13 @@ checkRequiredCommands
 rm -r "${GIT_LOG_DIR}" || true
 mkdir -p "${GIT_LOG_DIR}"
 
-createGitLogForFolder "/d/development/almex/cascara/core"
-createGitLogForFolder "/d/development/almex/cascara/jpos-server"
-createGitLogForFolder "/d/development/almex/cascara/platform-daemon"
-createGitLogForFolder "/d/development/almex/cascara/documentation"
-createGitLogForFolder "/d/development/almex/deutsche-bahn/cascara-addons"
-createGitLogForFolder "/d/development/almex/deutsche-bahn/cascara-client"
-createGitLogForFolder "/d/development/almex/deutsche-bahn/cascara-server"
-createGitLogForFolder "/d/development/almex/deutsche-bahn/systemtests"
-createGitLogForFolder "/d/development/almex/deutsche-bahn/platform-daemon-addons"
-createGitLogForFolder "/d/development/almex/hhag/cascara-addons"
-createGitLogForFolder "/d/development/almex/hhag/platform-daemon-addons"
+# Example
+# createGitLogForFolder "/d/development/almex/cascara/core"
+# createGitLogForFolder "/d/development/almex/cascara/jpos-server"
+# createGitLogForFolder "/d/development/almex/cascara/platform-daemon"
+# COMBINED_LOG_FILE="${GIT_LOG_DIR}/combined.log"
+# FILTERED_LOG_FILE="${GIT_LOG_DIR}/filtered.log"
+# combineGitLogs "${GIT_LOG_DIR}" "${COMBINED_LOG_FILE}"
+# removeLogsUntil "${COMBINED_LOG_FILE}" "2022-04-01" "${FILTERED_LOG_FILE}"
 
-COMBINED_LOG_FILE="${GIT_LOG_DIR}/combined.log"
-FILTERED_LOG_FILE="${GIT_LOG_DIR}/filtered.log"
-combineGitLogs "${GIT_LOG_DIR}" "${COMBINED_LOG_FILE}"
-removeLogsUntil "${COMBINED_LOG_FILE}" "2022-04-01" "${FILTERED_LOG_FILE}"
+createGitLogForFolder "/d/development/eon/i-pen/grid-data-model/model-schema"

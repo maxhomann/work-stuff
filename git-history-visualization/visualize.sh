@@ -6,10 +6,10 @@ WORK_DIR="${SCRIPT_PATH}"
 GIT_LOG_DIR="${WORK_DIR}/gource-git-logs"
 FFMPEG_EXE="/c/ProgramData/chocolatey/lib/ffmpeg/tools/ffmpeg/bin/ffmpeg.exe"
 
-PROJECT_NAME="Project Cascara"
-LOGO_FILE="logo.png"
+PROJECT_NAME="E.ON Model Schema"
+LOGO_FILE="gs-logo.svg"
 
-GOURCE_OPTIONS='-1920x1080 --camera-mode overview --background 515154 --multi-sampling --bloom-multiplier 0.6 --auto-skip-seconds 2 --seconds-per-day 3 --file-idle-time 0 --max-file-lag 0.8 --key --date-format %Y-%m-%d_%H:%M --logo '"${LOGO_FILE}"' --hide mouse,progress,filenames --window-position 1900x900 -o -'
+GOURCE_OPTIONS='-1920x1080 --camera-mode overview --background 515154 --multi-sampling --bloom-multiplier 0.6 --auto-skip-seconds 2 --seconds-per-day 2 --file-idle-time 0 --max-file-lag 0.8 --key --date-format %Y-%m-%d_%H:%M --logo '"${LOGO_FILE}"' --hide mouse,progress,filenames --window-position 1900x900 -o -'
 GOURCE_TITLE=(--title "${PROJECT_NAME}")
 FFMPEG_OPTIONS="-y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libvpx -b:v 6000K"
 
@@ -30,6 +30,6 @@ function checkRequiredCommands() {
 
 checkRequiredCommands
 
-FILTERED_LOG_FILE="${GIT_LOG_DIR}/filtered.log"
+LOG_FILE="${GIT_LOG_DIR}/model-schema.log"
 
-gource "${GOURCE_TITLE[@]}" ${GOURCE_OPTIONS} "${FILTERED_LOG_FILE}" | "${FFMPEG_EXE}" ${FFMPEG_OPTIONS} "${WORK_DIR}/${PROJECT_NAME}.webm"
+gource "${GOURCE_TITLE[@]}" ${GOURCE_OPTIONS} "${LOG_FILE}" | "${FFMPEG_EXE}" ${FFMPEG_OPTIONS} "${WORK_DIR}/${PROJECT_NAME}.webm"
