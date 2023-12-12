@@ -14,4 +14,3 @@ RUN git init  \
     && rm -rf .git
 
 ENTRYPOINT ["pre-commit", "run", "-v", "--all-files", "--config", "/opt/pre-commit/.pre-commit-config.yaml"]
-#ENTRYPOINT ["bash"]
