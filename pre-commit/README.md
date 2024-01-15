@@ -8,7 +8,7 @@ Building: `docker build -t maxhomann/pre-commit .`
 
 Usage (Win): `docker run --rm -ti -v //$(pwd):/opt/repo maxhomann/pre-commit`
 
-Shortcut (Win, git Bash): `echo "alias prec='docker run --rm -ti -v //$(pwd):/opt/repo maxhomann/pre-commit'" >> ~/.bashrc`
+Shortcut (Win, git Bash): `echo "alias prec='p'" >> ~/.bashrc`
 
 
 ## TODO
