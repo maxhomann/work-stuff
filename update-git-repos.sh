@@ -87,4 +87,5 @@ updateOthers
 
 logI "Done!"
 
+# TODO implement directory recursion
 #sleep 60
